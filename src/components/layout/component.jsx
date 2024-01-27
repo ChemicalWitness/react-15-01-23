@@ -6,11 +6,11 @@ import styles from './styles.module.scss';
 export const Layout = ({children}) => {
   return (
     <>
-      <Header></Header>
-      <main>
-        <div className={styles.wrapper}>{children}</div>
+      <Header />
+      <main className={styles.wrapper}>
+        {children}
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
