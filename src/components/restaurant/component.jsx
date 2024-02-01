@@ -4,12 +4,12 @@ import { Review } from "../review/component";
 
 import styles from './styles.module.scss';
 
-export const Restaurant = ({id,name, menu, reviews, className, activeTab}) => {
+export const Restaurant = ({restaurant}) => {
   return (
-    <div className={classNames(styles.card, activeTab === id ? className.tabActive : className.tabUnActive) }>
-       <h2>{name}</h2>
-       <Menu menu={menu} />
-       <Review review={reviews} />
+    <div className={classNames(styles.card) }>
+       <h2>{restaurant.name}</h2>
+       <Menu menu={restaurant.menu} />
+       <Review review={restaurant.reviews} />
      </div>
   );
 };

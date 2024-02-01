@@ -1,10 +1,9 @@
 import { useState } from "react";
 import styles from './styles.module.scss';
-import { ButtonCounter } from "../button-counter/component";
+import { Counter } from "../counter/component";
 
 export const Dish = ({dish}) => {
-
-
+  const [count, setCount] = useState(0);
 
   return (
     <div className={styles.root}>
@@ -12,7 +11,7 @@ export const Dish = ({dish}) => {
         <p>{dish.name}</p>
         <span>{dish.price}</span>
       </div>
-      <ButtonCounter/>
+      <Counter value={count} onChange={setCount} min={0} max={5}/>
     </div>
   );
 };
