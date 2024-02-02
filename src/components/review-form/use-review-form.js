@@ -1,0 +1,43 @@
+import { useReducer } from "react";
+
+const INITIAL_STATE = {
+  name: '',
+  text: '',
+  rating: 1,
+}
+
+const reducer = (state, {type, payload}) => {
+  switch (type) {
+    case "setName":
+      return {
+        ...INITIAL_STATE,
+        name: payload
+      }
+    case "setText":
+      return {
+        ...state,
+        text: payload
+      }
+    case "setRating":
+      return {
+        ...state,
+        rating: payload
+      }
+    default:
+      return state
+  }
+}
+
+
+export const useReviewForm = (initialValue = INITIAL_STATE) => {
+
+  const [form, dispatch] = useReducer(reducer, initialValue);
+
+  return {
+    form,
+    setName: (event) => dispatch({type: "setName", payload: event.target.value}),
+    setText: (event) => dispatch({type: "setText", payload: event.target.value}),
+    setRating: (event) => dispatch({type: "setRating", payload: event.target.value}),
+  }
+
+};
