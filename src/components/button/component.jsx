@@ -1,7 +1,8 @@
+import classNames from 'classnames'
 import styles from './styles.module.scss'
 
-export const Button = ({children}) => {
+export const Button = ({children, onClick, disabled, className}) => {
   return (
-    <button className={styles.button}>{children}</button>
+    <button disabled={disabled} onClick={onClick} className={classNames(styles.button, className) }>{children}</button>
   );
 };

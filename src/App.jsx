@@ -1,15 +1,13 @@
 import { Layout } from "./components/layout/component";
-import { Restaurant } from "./components/restaurant/component";
-import { restaurants } from './data/mock';
 
 import './styles/index.scss';
+import { RestaurantPage } from "./pages/restaurant-page/component";
 
 export const App = () => {
+
   return (
     <Layout>
-      {restaurants.map(({...restaurant}) => (
-        <Restaurant {...restaurant} />
-      ))}
+      <RestaurantPage/>
     </Layout>
   );
 };
