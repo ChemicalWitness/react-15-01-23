@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useCallback, useReducer } from "react";
 
 const INITIAL_STATE = {
   name: '',
@@ -33,11 +33,15 @@ export const useReviewForm = (initialValue = INITIAL_STATE) => {
 
   const [form, dispatch] = useReducer(reducer, initialValue);
 
+  const setName = useCallback((event) => dispatch({type: "setName", payload: event.target.value}), []);
+  const setText = useCallback((event) => dispatch({type: "setText", payload: event.target.value}), []);
+  const setRating = useCallback((event) => dispatch({type: "setRating", payload: event.target.value}), [])
+
   return {
     form,
-    setName: (event) => dispatch({type: "setName", payload: event.target.value}),
-    setText: (event) => dispatch({type: "setText", payload: event.target.value}),
-    setRating: (event) => dispatch({type: "setRating", payload: event.target.value}),
+    setName,
+    setText,
+    setRating,
   }
 
 };
