@@ -7,7 +7,7 @@ export const Login = () => {
   const [isLogin, setIsLogin] = useState(false)
   const checkLogin = () => {
     if (isLogin) {
-      setUser("Гость")
+      setUser()
       setIsLogin(false)
     } else {
       setUser({name: 'Adam', email: 'adGontier@gmail.com'})

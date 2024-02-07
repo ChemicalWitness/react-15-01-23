@@ -6,7 +6,7 @@ import { UserContext } from "./context/user";
 import { useContext, useState } from "react";
 
 export const App = () => {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState()
 
   return (
     <UserContext.Provider value={[user, setUser]}>

@@ -10,7 +10,7 @@ const [user, setUser] = useContext(UserContext)
   return (
     <header className={styles.header}>
       <Button>Menu</Button>
-      <p>Привет, {user.name ? user.name : 'Гость'}</p>
+      <p>Привет, {user ? user.name : 'Гость'}</p>
       <Login setUser={setUser}/>
     </header>
   );
