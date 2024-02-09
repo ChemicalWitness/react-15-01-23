@@ -3,7 +3,7 @@ import { ReviewForm } from "../review-form/component";
 import { UserContext } from "../../context/user";
 
 export const Review = ({review}) => {
-  const [user] = useContext(UserContext)
+  const {user} = useContext(UserContext)
   return (
     <div>
       <h3>Отзывы</h3>

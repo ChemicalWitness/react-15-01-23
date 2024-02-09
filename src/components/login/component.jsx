@@ -3,7 +3,7 @@ import { Button } from "../button/component";
 import { UserContext } from "../../context/user";
 
 export const Login = () => {
-  const [user, setUser] = useContext(UserContext)
+  const {user, setUser} = useContext(UserContext)
   const [isLogin, setIsLogin] = useState(false)
   const checkLogin = () => {
     if (isLogin) {

@@ -5,7 +5,7 @@ import { UserContext } from '../../context/user';
 import { Login } from '../login/component';
 
 export const Header = () => {
-const [user, setUser] = useContext(UserContext)
+const {user, setUser} = useContext(UserContext)
 
   return (
     <header className={styles.header}>
