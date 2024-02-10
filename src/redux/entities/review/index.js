@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { normalizedReviews } from "../../../data/normalized-mock";
 
 
 export const reviewSlice = createSlice({
   name: 'review',
   initialState: {
-    entities: {},
-    ids: []
+    entities: normalizedReviews.reduce((acc, review) => {
+      acc[review.id] = review
+      return acc
+    }, {}),
+    ids: normalizedReviews.map(({id}) => id)
   }
 })
