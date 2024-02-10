@@ -1,6 +1,4 @@
-import { useSelector } from "react-redux";
 import { Dish } from "../dish/component";
-import { selectRestaurantById } from "../../redux/entities/restaurant/selectors";
 
 export const Menu = ({menuIds}) => {
   return (

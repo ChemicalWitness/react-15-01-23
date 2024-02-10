@@ -3,7 +3,7 @@ import { Layout } from "./components/layout/component";
 import './styles/index.scss';
 import { RestaurantPage } from "./pages/restaurant-page/component";
 import { UserContext } from "./context/user";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Provider } from "react-redux";
 import { store } from "./redux";
 

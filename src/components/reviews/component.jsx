@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ReviewForm } from "../review-form/component";
 import { UserContext } from "../../context/user";
-import { useSelector } from "react-redux";
-import { selectReviewById } from "../../redux/entities/review/selectors";
 import { Review } from "../review/component";
 
 export const Reviews = ({reviewIds}) => {
