@@ -1,18 +1,11 @@
-import { useContext } from "react";
-import { ReviewForm } from "../review-form/component";
-import { UserContext } from "../../context/user";
+import { useSelector } from "react-redux";
+import { selectReviewById } from "../../redux/entities/review/selectors";
 
-export const Review = ({review}) => {
-  const {user} = useContext(UserContext)
+export const Review = ({reviewId}) => {
+  const review = useSelector((state) => selectReviewById(state, reviewId))
   return (
-    <div>
-      <h3>Отзывы</h3>
-      <ul>
-        {review.map(({text}) => (
-          <li>{text}</li>
-        ))}
-      </ul>
-      {user && <ReviewForm/>}
-    </div>
+    <>
+      {review.text}
+    </>
   );
 };
