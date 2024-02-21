@@ -10,6 +10,7 @@ export const Layout = ({children}) => {
       <main className={styles.wrapper}>
         {children}
       </main>
+      <div id='popoverContainer' className={styles.popoverContainer}></div>
       <Footer />
     </>
   );

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ReviewForm } from "../review-form/component";
 import { UserContext } from "../../context/user";
 import { Review } from "../review/component";
+import { ReviewContainer } from "../review/container";
 
 export const Reviews = ({reviewIds}) => {
   const {user} = useContext(UserContext)
@@ -11,7 +12,7 @@ export const Reviews = ({reviewIds}) => {
       <ul>
         {reviewIds.map((id) => (
           <li>
-            <Review reviewId={id}/>
+            <ReviewContainer reviewId={id}/>
           </li>
         ))}
       </ul>

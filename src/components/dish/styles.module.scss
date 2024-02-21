@@ -2,3 +2,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.counter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.button {
+  border-color: #000000;
+  color: #000000;
+}

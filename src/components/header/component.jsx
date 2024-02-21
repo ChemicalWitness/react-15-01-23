@@ -3,6 +3,7 @@ import { Button } from '../button/component';
 import styles from './styles.module.scss'
 import { UserContext } from '../../context/user';
 import { Login } from '../login/component';
+import { CartButtonContainer } from '../cart-button/container';
 
 export const Header = () => {
 const {user, setUser} = useContext(UserContext)
@@ -12,6 +13,7 @@ const {user, setUser} = useContext(UserContext)
       <Button>Menu</Button>
       <p>Привет, {user ? user.name : 'Гость'}</p>
       <Login setUser={setUser}/>
+      <CartButtonContainer />
     </header>
   );
 };

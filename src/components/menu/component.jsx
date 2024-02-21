@@ -1,13 +1,13 @@
 import { Dish } from "../dish/component";
 
-export const Menu = ({menuIds}) => {
+export const Menu = ({dishIds}) => {
   return (
     <div>
       <h3>Меню</h3>
       <ul>
-        {menuIds.map((id) => (
+        {dishIds.map((id) => (
           <li>
-            <Dish dishIds={id} />
+            <Dish dishId={id} />
           </li>
         ))}
       </ul>
