@@ -12,5 +12,5 @@ export const ReviewsContainer = ({restaurantId}) => {
     return <div>Loading...</div>
   }
 
-  return <Reviews reviews={reviews} />;
+  return <Reviews reviews={reviews} restaurantId={restaurantId} />;
 };

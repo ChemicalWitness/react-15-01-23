@@ -3,7 +3,7 @@ import { ReviewForm } from "../review-form/component";
 import { UserContext } from "../../context/user";
 import { ReviewContainer } from "../review/container";
 
-export const Reviews = ({reviews}) => {
+export const Reviews = ({reviews, restaurantId}) => {
   const {user} = useContext(UserContext)
   return (
     <div>
@@ -15,7 +15,7 @@ export const Reviews = ({reviews}) => {
           </li>
         ))}
       </ul>
-      {user && <ReviewForm/>}
+      {user && <ReviewForm restaurantId={restaurantId}/>}
     </div>
   );
 };
