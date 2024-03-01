@@ -1,3 +1,4 @@
+import { CartItemContainer } from "../cart-item/container";
 import { Dish } from "../dish/component";
 
 export const Menu = ({dishes}) => {
