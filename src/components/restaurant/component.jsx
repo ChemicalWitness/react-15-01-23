@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { Reviews } from "../reviews/component";
 
 import styles from './styles.module.scss';
 import { MenuContainer } from "../menu/container";

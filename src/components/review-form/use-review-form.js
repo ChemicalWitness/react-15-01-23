@@ -1,6 +1,6 @@
 import { useCallback, useReducer } from "react";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   name: '',
   text: '',
   rating: 1,
